@@ -108,8 +108,7 @@ module.exports = function(grunt) {
         dest: [ 'dist/' ],
         options:{
           cssmin: true,
-          uglify: true,
-          tag: ''
+          uglify: true
         },
       }
     }

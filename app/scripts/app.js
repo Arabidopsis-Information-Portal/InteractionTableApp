@@ -1,10 +1,10 @@
 'use strict';
-
-(function(window, $, undefined) {
+/*globals Biojs*/
+(function(window, $, Biojs, undefined) {
 
   var DEBUG, log, init, renderInteractionTable;
 
-  DEBUG = true;
+  DEBUG = false;
   log = function log( message ) {
     if ( DEBUG ) {
       console.log( message );
@@ -24,7 +24,7 @@
       myUrl = url.replace(/\/$/, '');
     }
 
-    var iTable = new Biojs.InteractionsTable({
+    new Biojs.InteractionsTable({
       target: 'ebi_iv_itable',
       dataSet: {
         dataType: 'text',
@@ -69,5 +69,4 @@
     }); /// end gene submit function
   }
 
-})(window, jQuery);
-
+})(window, jQuery, Biojs);
