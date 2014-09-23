@@ -1,9 +1,7 @@
-# AIP Science Apps
+# InteractionTableApp
 
-## Test Runner
-
-This package is a test runner environment useful for building Science Apps
-for the Arabidopsis Information Portal (AIP).
+An [AIP](http://www.araport.org) Science App created using [Yeoman](http://yeoman.io)
+and the [AIP science app generator](https://www.npmjs.org/package/generator-aip-science-app).
 
 ## Prerequisites
 
@@ -12,6 +10,7 @@ You need to have the following installed:
 - [Node.js + npm](http://nodejs.org/)
 - grunt
   - `npm install -g grunt-cli`
+  - `npm install -g bower`
 
 After those are installed, clone this repo, cd into the directory, and run:
 
@@ -19,7 +18,52 @@ After those are installed, clone this repo, cd into the directory, and run:
 git clone https://github.com/Arabidopsis-Information-Portal/InteractionTableApp.git
 cd InteractionTableApp
 npm install
+bower install
 grunt
 ```
 
-This will launch a server on `localhost:9000` and display your app.
+## App Code
+
+Your application code is in the `app/` subdirectory:
+
+```
+.
++-- app/
+|   +-- app.html
+|   +-- scripts/
+|       +-- app.js
+|   +-- styles/
+|       +-- app.css
+
+```
+
+## Development
+
+You can interactively develop your app using the built-in test runner. Simply
+execute this command from within the base directory of your app:
+
+```bash
+$ grunt
+```
+
+This will run your application on a local server at
+[http://localhost:9000](http://localhost:9000). It will also watch your
+app code for changes and automatically reload the browser when it detects
+changes.
+
+You can also run the test runner app in "production" mode with the command:
+
+```bash
+$ grunt serve:dist
+```
+
+This will start the same server, but without source code monitoring (live reload)
+and will also permit connections from outside, for example if you wanted to host
+the app yourself on a publicly accessible server.
+
+## Deployment
+
+When you are ready you can upload your application to the
+[AIP Science Apps Workspace](http://www.araport.org/apps).
+
+** More details coming soon! **
