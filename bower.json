@@ -1,5 +1,10 @@
 {
   "name": "interactiontableapp",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "biojs1": "https://github.com/Arabidopsis-Information-Portal/biojs1.git#v1.0.1",
+    "jquery-ui": "1.9.2",
+    "ui-multiselect": "a824a59",
+    "datatables": "1.9.4"
+  }
 }
